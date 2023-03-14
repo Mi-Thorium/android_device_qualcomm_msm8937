@@ -36,6 +36,10 @@ TARGET_SCREEN_DENSITY := 400
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_qualcomm_msm8937
+TARGET_RECOVERY_DEVICE_MODULES := init_qualcomm_msm8937
+
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
 
