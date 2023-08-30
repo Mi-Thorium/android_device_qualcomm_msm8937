@@ -118,3 +118,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
 include vendor/qualcomm/msm8937/BoardConfigVendor.mk
+-include vendor/private/custom-camera/msm8937/board.mk
