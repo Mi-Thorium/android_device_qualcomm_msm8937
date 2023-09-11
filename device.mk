@@ -25,7 +25,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    CustomROMsOverlay_msm8937
+    CustomROMsOverlay_msm8937 \
+    HapticOverlay
 
 # Audio
 PRODUCT_COPY_FILES += \
