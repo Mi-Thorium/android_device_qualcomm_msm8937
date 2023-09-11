@@ -44,16 +44,14 @@ TARGET_KERNEL_CONFIG += \
     vendor/msm8937-legacy.config
 endif
 TARGET_KERNEL_CONFIG += \
-    vendor/xiaomi/msm8937/common.config \
-    vendor/xiaomi/msm8937/mi8937.config
+    vendor/qualcomm/msm8937/qrd.config
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_RECOVERY_CONFIG += \
     vendor/msm8937-legacy.config
 endif
 TARGET_KERNEL_RECOVERY_CONFIG += \
-    vendor/xiaomi/msm8937/common.config \
-    vendor/xiaomi/msm8937/mi8937.config
+    vendor/qualcomm/msm8937/qrd.config
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
