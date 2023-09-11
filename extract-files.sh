@@ -56,6 +56,8 @@ fi
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+for proprietary_files_txt in ${MY_DIR}/proprietary-files*.txt; do
+    extract "$proprietary_files_txt" "${SRC}" "${KANG}" --section "${SECTION}"
+done
 
 "${MY_DIR}/setup-makefiles.sh"

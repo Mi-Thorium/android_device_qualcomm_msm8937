@@ -30,7 +30,9 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 # Warning headers and guards
 write_headers
 
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+for proprietary_files_txt in ${MY_DIR}/proprietary-files*.txt; do
+    write_makefiles "$proprietary_files_txt" true
+done
 
 # Finish
 write_footers
