@@ -126,8 +126,6 @@ VENDOR_SECURITY_PATCH := 2017-04-01
 # SELinux
 BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/odm
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy-odm
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
 include vendor/qualcomm/msm8937/BoardConfigVendor.mk

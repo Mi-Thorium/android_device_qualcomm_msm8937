@@ -32,10 +32,6 @@ PRODUCT_PACKAGES += \
     xiaomi_wt8937_overlay \
     xiaomi_wt8937_overlay_Settings
 
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_fingerprint/android.hardware.fingerprint.xml
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/mixer_paths/,$(TARGET_COPY_OUT_ODM)/etc/) \
@@ -51,14 +47,6 @@ PRODUCT_PACKAGES += \
     camera.prada \
     camera.ulysse \
     camera.wingtech
-
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/gx_fpd
-
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_wt8937
 
 # Input
 PRODUCT_COPY_FILES += \
