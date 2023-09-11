@@ -8,6 +8,8 @@ set_acdb_path_props() {
 	done
 }
 
+set_acdb_path_props QRD
+
 #case "$(cat /sys/firmware/devicetree/base/model)" in
 #esac
 

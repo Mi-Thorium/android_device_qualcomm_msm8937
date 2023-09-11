@@ -1,4 +1,3 @@
-# PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 # daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 # olive Package version: Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
 # olive (Pie) Package version: olive-user 9 PKQ1.190319.001 V11.0.11.0.PCNMIXM release-keys
@@ -53,9 +52,7 @@ vendor/etc/data/netmgr_config.xml:vendor/overlayfs/common/etc/data/netmgr_config
 
 # Sensors - from LA.UM.9.6.3.r1-06200-89xx.0
 vendor/bin/sensors.qti
--vendor/lib/libsensor1.so
--vendor/lib64/libsensor1.so
-
-# Sensors (SSC) - from daisy
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
+-vendor/lib/libsensor1.so
+-vendor/lib64/libsensor1.so
