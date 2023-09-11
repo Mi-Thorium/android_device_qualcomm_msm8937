@@ -15,8 +15,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
 
-# Inherit from Mi8937 device
-$(call inherit-product, device/xiaomi/Mi8937/device.mk)
+# Inherit from msm8937 device
+$(call inherit-product, device/qualcomm/msm8937/device.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -30,13 +30,13 @@ PRODUCT_PACKAGES += \
     xiaomi_wt8937_overlay_lineage
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Mi8937_4_19
-PRODUCT_NAME := lineage_Mi8937_4_19
-BOARD_VENDOR := Xiaomi
-PRODUCT_BRAND := Xiaomi
+PRODUCT_DEVICE := msm8937_4_19
+PRODUCT_NAME := lineage_msm8937_4_19
+BOARD_VENDOR := Qualcomm
+PRODUCT_BRAND := Qualcomm
 PRODUCT_MODEL := MSM8937
-PRODUCT_MANUFACTURER := Xiaomi
-TARGET_VENDOR := Xiaomi
+PRODUCT_MANUFACTURER := Qualcomm
+TARGET_VENDOR := Qualcomm
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

@@ -88,7 +88,7 @@ fi
 
 set -e
 
-export DEVICE=Mi8937
+export DEVICE=msm8937
 export DEVICE_COMMON=mithorium-common
 export VENDOR=xiaomi
 

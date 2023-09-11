@@ -6,9 +6,9 @@
 
 // fstab
 soong_config_module_type {
-    name: "xiaomi_mi8937_rootdir_prebuilt_etc",
+    name: "qualcomm_msm8937_rootdir_prebuilt_etc",
     module_type: "prebuilt_etc",
-    config_namespace: "XIAOMI_MI8937_ROOTDIR",
+    config_namespace: "QUALCOMM_MSM8937_ROOTDIR",
     variables: ["KERNEL_VERSION"],
     properties: ["src"],
 }
@@ -18,7 +18,7 @@ soong_config_string_variable {
     values: ["k4_9", "k4_19"],
 }
 
-xiaomi_mi8937_rootdir_prebuilt_etc {
+qualcomm_msm8937_rootdir_prebuilt_etc {
     name: "fstab.qcom",
     src: "etc/fstab_4_9.qcom",
     soong_config_variables: {

@@ -19,11 +19,11 @@ $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/Mi8937
-USES_DEVICE_XIAOMI_MI8937 := true
+DEVICE_PATH := device/qualcomm/msm8937
+USES_DEVICE_QUALCOMM_MSM8937 := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := mi8937,land,santoni,prada,ulysse,ugglite,ugg,rolex,riva,Mi8937,Mi8937_4_19
+TARGET_OTA_ASSERT_DEVICE := msm8937,msm8937_4_19
 
 # Camera
 #MI8937_CAM_USE_LATEST_CAMERA_STACK := true
@@ -39,10 +39,6 @@ TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mi8937
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
@@ -116,12 +112,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab_4_9.qcom
 endif
 
 # Rootdir
-SOONG_CONFIG_NAMESPACES += XIAOMI_MI8937_ROOTDIR
-SOONG_CONFIG_XIAOMI_MI8937_ROOTDIR := KERNEL_VERSION
+SOONG_CONFIG_NAMESPACES += QUALCOMM_MSM8937_ROOTDIR
+SOONG_CONFIG_QUALCOMM_MSM8937_ROOTDIR := KERNEL_VERSION
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
-SOONG_CONFIG_XIAOMI_MI8937_ROOTDIR_KERNEL_VERSION := k4_19
+SOONG_CONFIG_QUALCOMM_MSM8937_ROOTDIR_KERNEL_VERSION := k4_19
 else
-SOONG_CONFIG_XIAOMI_MI8937_ROOTDIR_KERNEL_VERSION := k4_9
+SOONG_CONFIG_QUALCOMM_MSM8937_ROOTDIR_KERNEL_VERSION := k4_9
 endif
 
 # Security patch level
@@ -134,4 +130,4 @@ BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy-odm
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
-include vendor/xiaomi/Mi8937/BoardConfigVendor.mk
+include vendor/qualcomm/msm8937/BoardConfigVendor.mk

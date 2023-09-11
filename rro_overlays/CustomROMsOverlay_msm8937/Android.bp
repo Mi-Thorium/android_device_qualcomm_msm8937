@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "CustomROMsOverlay_Mi8937",
+    name: "CustomROMsOverlay_msm8937",
     sdk_version: "current",
     device_specific: true,
 }

@@ -22,7 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    CustomROMsOverlay_Mi8937 \
+    CustomROMsOverlay_msm8937 \
     xiaomi_prada_overlay \
     xiaomi_prada_overlay_Settings \
     xiaomi_rolex_overlay \
@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/Mi8937/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
+    vendor/qualcomm/msm8937/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -101,13 +101,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_mi8937
-
 # Wifi
 PRODUCT_PACKAGES += \
     WifiOverlay_prada
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
+$(call inherit-product, vendor/qualcomm/msm8937/msm8937-vendor.mk)

@@ -5,7 +5,7 @@
 #
 
 # Inherit from upper BoardConfig.mk
-include device/xiaomi/Mi8937/BoardConfig.mk
+include device/qualcomm/msm8937/BoardConfig.mk
 
 # Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/Mi8937_4_19/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/msm8937_4_19/vendor.prop
