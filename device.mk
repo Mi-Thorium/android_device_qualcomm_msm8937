@@ -22,15 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    CustomROMsOverlay_msm8937 \
-    xiaomi_prada_overlay \
-    xiaomi_prada_overlay_Settings \
-    xiaomi_rolex_overlay \
-    xiaomi_riva_overlay \
-    xiaomi_ugg_overlay \
-    xiaomi_ugglite_overlay \
-    xiaomi_wt8937_overlay \
-    xiaomi_wt8937_overlay_Settings
+    CustomROMsOverlay_msm8937
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -38,30 +30,12 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/platform_info/,$(TARGET_COPY_OUT_ODM)/etc/)
 
 # Camera
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/mm-qcamera-daemon \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/etc/camera/.placeholder
-
 PRODUCT_PACKAGES += \
-    camera.land \
-    camera.prada \
-    camera.ulysse \
-    camera.wingtech
+    camera.msm8937
 
 # Input
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/) \
-    $(foreach f, msm8917-sku5-snd-card_Button_Jack.kl msm8920-sku7-snd-card_Button_Jack.kl msm8952-sku1-snd-card_Button_Jack.kl, \
-        $(LOCAL_PATH)/keylayout/msm8952-snd-card-mtp_Button_Jack.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/$(f))
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
-
-# Placeholder
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/.placeholder \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/lib64/.placeholder
+#PRODUCT_COPY_FILES += \
+#    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -70,17 +44,11 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
-    init.baseband.sh \
-    init.goodix.sh \
     init.xiaomi.device.rc \
     init.xiaomi.device.sh
 
 # Shims
 PRODUCT_PACKAGES += \
-    libbinder_shim \
-    libfakelogprint \
-    libshim_mutexdestroy \
-    libshim_pthreadts \
     libshims_android \
     libshims_ui \
     libwui
@@ -88,10 +56,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Wifi
-PRODUCT_PACKAGES += \
-    WifiOverlay_prada
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/qualcomm/msm8937/msm8937-vendor.mk)

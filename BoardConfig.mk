@@ -26,16 +26,12 @@ USES_DEVICE_QUALCOMM_MSM8937 := true
 TARGET_OTA_ASSERT_DEVICE := msm8937,msm8937_4_19
 
 # Camera
-#MI8937_CAM_USE_LATEST_CAMERA_STACK := true
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_SUPPORT_HAL1 := false
 endif
 
 # Display
 TARGET_SCREEN_DENSITY := 280
-
-# Filesystem
-TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -50,10 +46,6 @@ endif
 TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/msm8937/common.config \
     vendor/xiaomi/msm8937/mi8937.config
-
-ifeq ($(MI8937_CAM_USE_LATEST_CAMERA_STACK),true)
-TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.config
-endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_RECOVERY_CONFIG += \
@@ -98,9 +90,6 @@ ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 838860800 # 800 MB
 endif
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/sys/dev/xiaomi_msm8937_touchscreen/enable_dt2w"
-
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
@@ -124,7 +113,6 @@ endif
 VENDOR_SECURITY_PATCH := 2017-04-01
 
 # SELinux
-BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/odm
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
