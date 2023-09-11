@@ -40,8 +40,8 @@ PRODUCT_PACKAGES += \
     camera.msm8937
 
 # Input
-#PRODUCT_COPY_FILES += \
-#    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
 
 # Recovery
 PRODUCT_COPY_FILES += \
