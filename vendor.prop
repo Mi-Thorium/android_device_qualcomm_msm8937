@@ -1,4 +1,7 @@
 # Qualcomm MSM8937 - Audio fluence
+persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=false
-ro.vendor.audio.sdk.fluencetype=fluence
+persist.vendor.audio.fluence.voicerec=false
+ro.vendor.audio.sdk.fluencetype=none
 vendor.audio.feature.fluence.enable=true
