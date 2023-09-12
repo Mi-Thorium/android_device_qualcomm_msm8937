@@ -65,4 +65,4 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/qualcomm/msm8937/msm8937-vendor.mk)
-$(call inherit-product-if-exists, vendor/private/custom-camera/msm8937/product.mk)
+#$(call inherit-product-if-exists, vendor/private/custom-camera/msm8937/product.mk)
