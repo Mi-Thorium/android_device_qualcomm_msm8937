@@ -3,8 +3,3 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
     user root
     group root
     oneshot
-
-# Audio
-on init
-    setprop vendor.audio.mixer_xml.path /odm/etc/mixer_paths_qrd_sku1.xml
-    setprop vendor.audio.platform_info_xml.path /odm/etc/audio_platform_info_intcodec.xml

@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
+    init.acdbdata.sh \
     init.xiaomi.device.rc \
     init.xiaomi.device.sh
 

@@ -1,16 +1,11 @@
 #!/vendor/bin/sh
 
-set_acdb_path_props() {
-	i=0
-	for f in `ls /vendor/etc/acdbdata/${1}/*.*`; do
-		setprop "persist.vendor.audio.calfile${i}" "${f}"
-		let i+=1
-	done
-}
-
-set_acdb_path_props QRD
-
-#case "$(cat /sys/firmware/devicetree/base/model)" in
-#esac
+case "$(cat /sys/firmware/devicetree/base/model)" in
+	"Qualcomm Technologies, Inc. MSM8937-PMI8950 QRD SKU1 DVT1")
+		# Audio
+		setprop vendor.audio.mixer_xml.path /odm/etc/mixer_paths_qrd_sku1.xml
+		setprop vendor.audio.platform_info_xml.path /odm/etc/audio_platform_info_intcodec.xml
+		;;
+esac
 
 exit 0
