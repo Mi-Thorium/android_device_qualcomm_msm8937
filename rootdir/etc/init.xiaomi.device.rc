@@ -8,3 +8,17 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
 on init
     setprop vendor.audio.mixer_xml.path /odm/etc/mixer_paths_qrd_sku1.xml
     setprop vendor.audio.platform_info_xml.path /odm/etc/audio_platform_info_intcodec.xml
+
+# HBTP
+service vendor.hbtp /vendor/bin/hbtp_daemon
+    class main
+    user system
+    group system
+    capabilities SYS_NICE
+
+on init
+    chmod 0660 /dev/hbtp_input
+    chown system system /dev/hbtp_input
+    chmod 0660 /dev/hbtp_vm
+    chown system system /dev/hbtp_vm
+    chown system system /sys/kernel/hbtp/display_pwr
